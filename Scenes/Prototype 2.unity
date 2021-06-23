@@ -479,9 +479,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horzontalInput: 0
+  verticalInput: 0
   speed: 10
   xRange: 10
+  zRange: -1
   projectilePrefab: {fileID: 803343670268628683, guid: f323062723c3db04283fcc9030dacec0, type: 3}
+--- !u!65 &668088122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668088118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3512502, y: 3.5831344, z: 1}
+  m_Center: {x: 0.005392343, y: 1.2915674, z: 0}
 --- !u!1 &992285705
 GameObject:
   m_ObjectHideFlags: 0
