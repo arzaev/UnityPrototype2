@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f;
     public float xRange = 10f;
     public float zRange = -1f;
+    private int lives = 3;
+    public static int score = 0;
+    public int oldScore;
+
 
     public GameObject projectilePrefab;
 
@@ -49,10 +53,30 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
+        if (score != oldScore)
+        {
+            Debug.Log("score: " + score);
+            oldScore = score;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Game Over!");
+        if (other.tag == "animal")
+        {
+
+            if (lives == 0)
+            {
+                Debug.Log("Game Over!");
+            }
+            else
+            {
+                lives--;
+                Debug.Log("lives: " + lives);
+            }
+            
+        }
     }
+
 }
