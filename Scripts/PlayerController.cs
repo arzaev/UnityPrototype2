@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -69,6 +70,9 @@ public class PlayerController : MonoBehaviour
             if (lives == 0)
             {
                 Debug.Log("Game Over!");
+                Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
             }
             else
             {

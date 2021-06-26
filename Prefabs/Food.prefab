@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8618494029381586111}
   - component: {fileID: 8078044738336428244}
   m_Layer: 0
-  m_Name: Food_Sandwich_01
+  m_Name: Food
   m_TagString: fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733c74746f8b02a4f841f91265dda52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 50
 --- !u!114 &3745104915665183085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,4 +152,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b04c34ec659c394c86a3ba6f09d3a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-
+    HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,16 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "animal")
+        if (other.CompareTag("animal"))
         {
-            Destroy(other.gameObject);
+            healthBar = other.GetComponent<HealthBar>();
+            healthBar.health += 33f;
+            if (healthBar.health == 99f)
+            {
+                Destroy(other.gameObject);
+                PlayerController.score += 1;
+            }
             Destroy(gameObject);
-            PlayerController.score += 1;
         }
     }
 }
